@@ -482,11 +482,11 @@
 - (void)updateTopBarFrameWithStatusBarFrame:(CGRect)rect;
 {
     CGFloat width = MAX(rect.size.width, rect.size.height);
-    CGFloat height = MIN(rect.size.width, rect.size.height);
+    CGFloat height = MIN(rect.size.width, rect.size.height)*2.5;
     
     // on ios7 fix position, if statusBar has double height
     CGFloat yPos = 0;
-    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0 && height > 20.0) {
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0 && height > 50.0) {
         yPos = -height/2.0;
     }
     
